@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+    "preinstall": "npm i -g pm2 && pm2 install pm2-logrotate"
   },
   "author": "Adelixxe",
   "license": "ISC",
