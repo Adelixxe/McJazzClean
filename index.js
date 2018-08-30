@@ -83,8 +83,9 @@ client.on('message', msg => {
 
     if (msg.content === "$start" && isReady === true && isPaused === false) {
         if (!voiceChannel) return msg.reply('Not in a voice channel.');
-         isReady = false;
-        voiceChannel.join().then(connection => {
+        isReady = false;
+        voiceChannel.join()
+            .then(connection => {
             music();
         })
         function music () {
