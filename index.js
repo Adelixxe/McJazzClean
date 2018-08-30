@@ -7,12 +7,12 @@ const clientOptions = { seek: 0, volume: 0.2 };
 var isReady = true;
 var isPaused = false;
 
-var url =[
-/*01*/  "https://youtu.be/vmDDOFXSgAs",
-/*02*/  "https://youtu.be/iCwGQXJqu5s",
-/*03*/  "https://youtu.be/sgn7VfXH2GY",
-/*04*/  "https://youtu.be/sR13ECD71xU",
-/*05  "https://youtu.be/HYwdiv7AOkY",
+/*var url =[
+01  "https://youtu.be/vmDDOFXSgAs",
+02  "https://youtu.be/iCwGQXJqu5s",
+03  "https://youtu.be/sgn7VfXH2GY",
+04  "https://youtu.be/sR13ECD71xU",
+05  "https://youtu.be/HYwdiv7AOkY",
 06  "https://youtu.be/ecrE80rnjhw",
 07  "https://youtu.be/G4H9k-d9fBk",
 08  "https://youtu.be/PoPL7BExSQU",
@@ -86,7 +86,7 @@ client.on('message', msg => {
         isReady = false;
         voiceChannel.join()
             .then(connection => {
-                const dispatcher = connection.playStream(ytdl(url, { filter: 'audioonly' }), clientOptions);
+                const dispatcher = connection.playStream(ytdl('https://youtu.be/DHTrHER5YlM', { filter: 'audioonly' }), clientOptions);
                 dispatcher.on('end', () => {
                    
                 });
