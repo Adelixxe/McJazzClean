@@ -11,15 +11,15 @@ client.on('ready', () => {
     client.user.setActivity('Jazz', { type: 'PLAYING' });
 });
 
-voiceChannel.connection.dispatcher.setBitrate(value); {
-    if (!value) return;
-    if (!this.opusEncoder) return;
-    const bitrate = value === 'auto' ? this.voiceConnection.channel.bitrate : value;
-    this.opusEncoder.setBitrate(126);
-}
-
 client.on('message', msg => {
     var voiceChannel = msg.member.voiceChannel;
+
+    voiceChannel.connection.dispatcher.setBitrate(value); {
+        if (!value) return;
+        if (!this.opusEncoder) return;
+        const bitrate = value === 'auto' ? this.voiceConnection.channel.bitrate : value;
+        this.opusEncoder.setBitrate(126);
+    }
 
     if (msg.content === "$start" && isReady === true && isPaused === false) {
         if (!voiceChannel) return msg.reply('Not in a voice channel.');
