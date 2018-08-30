@@ -7,7 +7,9 @@ const clientOptions = { seek: 0, volume: 0.2 };
 var isReady = true;
 var isPaused = false;
 
-/*var url =[
+/*URL PLAYLIST SPOTIFY*/
+
+/*var url =[ 
 01  "https://youtu.be/vmDDOFXSgAs",
 02  "https://youtu.be/iCwGQXJqu5s",
 03  "https://youtu.be/sgn7VfXH2GY",
@@ -86,7 +88,7 @@ client.on('message', msg => {
         isReady = false;
         voiceChannel.join()
             .then(connection => {
-                const dispatcher = connection.playStream(ytdl('https://youtu.be/DHTrHER5YlM', { filter: 'audioonly' }), clientOptions);
+                const dispatcher = connection.playStream(ytdl('https://youtu.be/_sI_Ps7JSEk', { filter: 'audioonly' }), clientOptions);
                 dispatcher.on('end', () => {
                    
                 });
