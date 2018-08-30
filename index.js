@@ -90,14 +90,14 @@ client.on('message', msg => {
                 dispatcher.on('end', () => {
                    
                 });
-        })
+        });
         /*function music () {
             const dispatcher = connection.playStream(ytdl(url, { filter: 'audioonly' }), clientOptions);
             dispatcher.on('end', () => {
                 music();
              });*/
         }
-    }
+    });
 
     if (msg.content === "$leave" && (isReady === false || isPaused === true)) {
         if (!voiceChannel) return msg.reply('Not in a voice channel.');
