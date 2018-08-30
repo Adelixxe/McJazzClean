@@ -97,7 +97,6 @@ client.on('message', msg => {
                 music();
              });*/
         }
-    });
 
     if (msg.content === "$leave" && (isReady === false || isPaused === true)) {
         if (!voiceChannel) return msg.reply('Not in a voice channel.');
