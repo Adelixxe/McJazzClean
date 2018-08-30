@@ -86,13 +86,16 @@ client.on('message', msg => {
         isReady = false;
         voiceChannel.join()
             .then(connection => {
-            music();
+                const dispatcher = connection.playStream(ytdl(url, { filter: 'audioonly' }), clientOptions);
+                dispatcher.on('end', () => {
+                   
+                });
         })
-        function music () {
+        /*function music () {
             const dispatcher = connection.playStream(ytdl(url, { filter: 'audioonly' }), clientOptions);
             dispatcher.on('end', () => {
                 music();
-             });
+             });*/
         }
     }
 
