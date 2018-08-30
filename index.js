@@ -71,8 +71,8 @@ var isPaused = false;
 61  "https://youtu.be/2ybTybmIo8w",
 62  "https://youtu.be/-cRl1CxwKjw",
 63  "https://youtu.be/J0FcKOfRgvE",
-64  "https://youtu.be/DHTrHER5YlM"*/
-];
+64  "https://youtu.be/DHTrHER5YlM"
+];*/
 
 client.on('ready', () => {
     client.user.setActivity('Jazz', { type: 'PLAYING' });
