@@ -83,18 +83,16 @@ client.on('message', msg => {
 
     if (msg.content === "$start" && isReady === true && isPaused === false) {
         if (!voiceChannel) return msg.reply('Not in a voice channel.');
-
+         isReady = false;
+        voiceChannel.join().then(connection => {
+            music();
+        })
         function music () {
             const dispatcher = connection.playStream(ytdl(url, { filter: 'audioonly' }), clientOptions);
             dispatcher.on('end', () => {
                 music();
              });
         }
-
-        isReady = false;
-        voiceChannel.join().then(connection => {
-            music();
-        })
     }
 
     if (msg.content === "$leave" && (isReady === false || isPaused === true)) {
