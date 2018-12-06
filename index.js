@@ -21,7 +21,8 @@ client.on('message', msg => {
             .then(connection => {
                 const dispatcher = connection.playStream(ytdl('https://youtu.be/_sI_Ps7JSEk', { filter: 'audioonly' }), clientOptions);
                 dispatcher.on('end', () => {
-
+                    isReady = true;
+                    voiceChannel.leave();
                 });
         });
     }
