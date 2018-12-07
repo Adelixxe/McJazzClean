@@ -8,7 +8,7 @@ var isReady = true;
 var isPaused = false;
 
 client.on('ready', () => {
-    client.user.setActivity('Jazz | @Adelixxe', { type: 'PLAYING' });
+    client.user.setActivity('Jazz @Adelixxe', { type: 'PLAYING' });
 });
 
 client.on('message', msg => {
