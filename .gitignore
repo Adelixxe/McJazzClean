@@ -1,0 +1,3 @@
+echo 'node_modules' >> .gitignore
+git rm -r --cached node_modules
+git commit -m "ignore node_modules"
